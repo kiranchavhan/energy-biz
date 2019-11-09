@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+       function fa() {
+           window.open("https://www.facebook.com");
+
+       }
+       function go() {
+           window.open("https://www.google.co.in");
+
+       }
+       function ia() {
+           window.open("http://www.iaeng.org");
+
+       }
+       function wwe() {
+           window.open("http://www.worldenergy.org");
+
+       }
+       function ub() {
+           window.open("http://ubiquity.acm.org");
+
+       }
+       function insta() {
+           window.open("https://www.instagram.com");
+
+       }
+       function wta() {
+           window.open("https://web.whatsapp.com");
+
+       }
+       function wiki() {
+           window.open("https://www.wikipedia.org");
+
+       }
+       var myvid = document.getElementById('video1');
+
+       myvid.addEventListener('ended', function(e) {
+           // get the active source and the next video source.
+           // I set it so if there's no next, it loops to the first one
+           var activesource = document.querySelector("#video1 source.active");
+           var nextsource = document.querySelector("#video1 source.active + source") || document.querySelector("#video1 source:first-child");
+
+           // deactivate current source, and activate next one
+           activesource.className = "";
+           nextsource.className = "active";
+
+           // update the video source and play
+           myvid.src = nextsource.src;
+           myvid.play();
+       });
+    </script>
+
+</head>
+<body ><!-- Side navigation -->
+<header>
+    <div class="logo"><img src="10.jpg" alt="abc" height="70px" width="70px">  </div>
+    <div class="reg" align="center"><h1>
+        IT AND CONSERVING ENERGY
+    </h1></div>
+</header>
+<div id="mySidenav" class="sidenav">
+    <a href="#" id="about">About</a>
+    <a href="#" id="blog">Blog</a>
+    <a href="#" id="projects">Projects</a>
+    <a href="#" id="contact">Contact</a>
+</div>
+<!--<div id="mydown_nav" class="down_nav">
+    <a id="a1">any suggestions<br><br></a><a id="a2"><textarea cols="25" rows="5"></textarea></a>
+</div> -->   <nav class="dropdown">
+        <ul>
+            <li id="t" ><button id="q">AWARENESS</button>
+            <div class="dropdown-content1"><a id="e1">Awareness can spread through various social media sites like<br>
+            facebook<br>whatsapp<br>and many more</a></div></li>
+            <li id="w"><button id="u">INFORMATION</button><div class="dropdown-content2"><a id="e2">People can use <b><u>IT</u></b> to extract information
+            in order to use it to conserve energy through internet</a></div></li>
+            <li id="e"><button id="y">TECHNOLOGY</button><div class="dropdown-content3" color="darkslategray" ><a id="e3">Number of sci-technology are used to conserve energy for example:-<br>
+                automated motion detecting light<br>street light stimulated to sunlight<br>many more..            </a></div></li>
+            		</ul>
+    </nav>
+
+
+<section class="slideshow">
+    <div class="content">
+        <div class="content1">
+   <figure class="witch"> <img src="1.png" id="1" onclick="fa()"></figure>
+            <figure class="witch"><img src="2.png" id="2" onclick="go()"></figure>
+                <figure class="witch"><img src="3.png" id="3" onclick="ia()"></figure>
+                    <figure class="witch"><img src="4.png" id="4" onclick="wwe()"></figure>
+                        <figure class="witch">  <img src="5.png" id="5" onclick="ub()"></figure>
+            <figure class="witch">  <img src="6.png" id="6" onclick="insta()"></figure>
+            <figure class="witch">  <img src="7.png" id="7" onclick="wta()"></figure>
+            <figure class="witch">  <img src="8.png" id="8" onclick="wiki()"></figure>
+
+        </div>
+
+    </div><div class="sal"><a >Awareness and Circulation of Info</a></div>
+
+        <video id="video1" controls loop autoplay >
+
+            <source class="active" src="v2.mp4" type="video/mp4">
+            <
+            Your browser does not support the video tag.
+        </video>
+
+
+</section><div class="sec2">
+    <a class="rel"><b>  Techs can used to conserve energy</b> </a>
+    <p><h2>AUTOMATED MOTION DETECTOR LIGHTS</h2>
+    They detect motion and then get switched on saving many watts<br> of unnecessary use of electricity when not in use<br>
+    <h3>MOTION AND TEMPERATURE DETECTOR AC</h3>
+    They detect motion and temperature then get switched on saving many watts<br> of unnecessary use of electricity when not in use
+    <h4>SUNLIGHT STIMULATED STREETLIGHT</h4>
+    These street light are stimulated to sun means whenever there is sunlight these<br> lights will remain off they will turn on only when there is darkness
+       </p>
+    <video class="video2" controls loop onresize="200px">
+        <source src="v1.mp4" type="video/mp4">
+    </video>
+</div>
+<hr class="line">
+
+</body>
+</html>
